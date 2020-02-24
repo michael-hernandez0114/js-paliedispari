@@ -31,7 +31,7 @@ else {
     vince = 'computer';
 }
 
-alert("Al fine, il ganadore e: " + vince);
+alert("Al fine, il vincitore e: " + vince);
 
 function checkUtentePariODis (userInput) {
 
