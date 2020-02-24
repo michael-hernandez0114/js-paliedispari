@@ -3,7 +3,11 @@ var utenteNumero;
 var numeroComputer;
 var somma;
 
-utentePariODispari = prompt("Che pensi? Un numero Pari o Dispari?");
+
+do {
+    utentePariODispari = prompt("Che pensi? Un numero Pari o Dispari?");
+} while (checkUtentePariODis(utentePariODispari));
+//utentePariODispari = prompt("Che pensi? Un numero Pari o Dispari?");
 utenteNumero = parseInt(prompt("Scegli un numero da 1 a 5"));
 numeroComputer = randomNumber(1, 5);
 
@@ -14,6 +18,20 @@ somma = numeroComputer + utenteNumero;
 console.log("somma e: " + somma);
 
 
+function checkUtentePariODis (userInput) {
+
+    var acceptedInput = ["pari","dispari"];
+    var result;
+
+    if (acceptedInput.includes(userInput.toLowerCase())) {
+        result = true;
+    }
+    else {
+        result = false;
+    }
+
+    return result;
+}
 
 function ePari (numero) {
     var result;
